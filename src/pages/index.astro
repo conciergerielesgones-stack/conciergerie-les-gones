@@ -1,0 +1,241 @@
+---
+import Base from '../layouts/Base.astro';
+---
+<Base title="Conciergerie les Gônes · Boostez vos revenus Airbnb à Lyon et Villeurbanne"
+      description="Conciergerie Airbnb à Lyon et Villeurbanne : prix ajustés ensemble, remise des clés, ménage, urgences. Simulez vos revenus en 30 secondes.">
+
+<section id="top" style="background: linear-gradient(180deg, #EEF2FF 0%, #FFFFFF 100%); padding: 88px 24px 96px">
+ <div style="max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 480px), 1fr)); gap: 56px; align-items: center">
+  
+  <div style="display: flex; flex-direction: column; gap: 24px; align-items: flex-start; text-align: left">
+   <span style="display: inline-flex; align-items: center; gap: 8px; padding: 6px 14px; border-radius: 999px; background: #FFFFFF; color: #1F4FFF; font-size: 14px; font-weight: 600"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Conciergerie Airbnb · Lyon &amp; Villeurbanne</span>
+   <h1 style="margin: 0; font-family: 'Plus Jakarta Sans', sans-serif; font-size: clamp(40px, 5.4vw, 72px); line-height: 1.04; letter-spacing: -0.035em; font-weight: 700; color: #0B1533">Boostez vos revenus Airbnb. <span style="color: #1F4FFF">Simplement.</span></h1>
+   <p style="margin: 0; font-size: 19px; line-height: 1.55; color: #4A5675; max-width: 560px">Prix ajustés ensemble, remise des clés, ménage, urgences : on vous accompagne pour mettre votre appartement sur Airbnb en toute simplicité, à Lyon et Villeurbanne. Passez d’hôte à Superhôte en quelques réservations.</p>
+   <div style="display: flex; flex-wrap: wrap; gap: 12px; justify-content: flex-start">
+    <a href="#simulateur" style="display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 44px; padding: 16px 26px; border-radius: 12px; background: #1F4FFF; color: #FFFFFF; font-weight: 600; font-size: 16px; text-decoration: none; border: 0; cursor: pointer; font-family: inherit">Simuler mes revenus</a>
+    <a href="#" data-href="waHello" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 44px; padding: 16px 26px; border-radius: 12px; background: transparent; color: #0B1533; font-weight: 600; font-size: 16px; text-decoration: none; border: 1.5px solid #C9D2EE; cursor: pointer; font-family: inherit"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.3 7.5L3 21l2-5.6A8.4 8.4 0 1 1 21 11.5z"/></svg> Écrire sur WhatsApp</a>
+   </div>
+   <ul style="list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 12px 24px; font-size: 15px; color: #4A5675"><li style="display: flex; align-items: center; gap: 8px"><span style="color: #1F4FFF"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span>Intervention à moins de 10 km</li><li style="display: flex; align-items: center; gap: 8px"><span style="color: #1F4FFF"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span>Urgences accompagnées</li><li style="display: flex; align-items: center; gap: 8px"><span style="color: #1F4FFF"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span>Avis 5★ sur nos logements</li></ul>
+  </div>
+  <div id="simulateur" style="background: #FFFFFF; border: 1px solid #E2E7F5; border-radius: 20px; padding: 28px; box-shadow: 0 20px 50px rgba(15, 23, 60, 0.08); display: flex; flex-direction: column; gap: 22px">
+   <div style="display: flex; flex-direction: column; gap: 6px"><p style="margin: 0; font-size: 13px; font-weight: 700; color: #1F4FFF; text-transform: uppercase; letter-spacing: 0.1em">Simulateur</p><h2 style="margin: 0; font-family: 'Plus Jakarta Sans', sans-serif; font-size: 24px; letter-spacing: -0.02em">Combien peut rapporter votre appartement ?</h2></div>
+   
+    <div style="display: flex; flex-direction: column; gap: 20px">
+     <label style="display: flex; flex-direction: column; gap: 8px; font-size: 14px; font-weight: 600; color: #0B1533">Où se trouve votre appartement ?
+      <select id="f-zone" style="min-height: 48px; padding: 0 14px; border-radius: 12px; border: 1.5px solid #CBD3EA; background: #FFFFFF; color: #0B1533; font-size: 16px; font-family: inherit">
+       <option value="presquile">Lyon 1-2 · Presqu’île</option><option value="lyon6">Lyon 6</option><option value="lyon3">Lyon 3 · Part-Dieu</option><option value="lyon7">Lyon 7 · Guillotière</option><option value="gratteciel" selected>Villeurbanne · Gratte-Ciel</option><option value="villeurbanne">Villeurbanne · autres quartiers</option><option value="lyon89">Lyon 8 / 9</option>
+      </select>
+     </label>
+     <label style="display: flex; flex-direction: column; gap: 8px; font-size: 14px; font-weight: 600; color: #0B1533">Type de logement
+      <select id="f-type" style="min-height: 48px; padding: 0 14px; border-radius: 12px; border: 1.5px solid #CBD3EA; background: #FFFFFF; color: #0B1533; font-size: 16px; font-family: inherit">
+       <option value="studio">Studio</option><option value="t2" selected>T2</option><option value="t3">T3</option><option value="t4">T4 et +</option>
+      </select>
+     </label>
+     <label style="display: flex; flex-direction: column; gap: 8px; font-size: 14px; font-weight: 600; color: #0B1533"><span style="display: flex; justify-content: space-between"><span>Taux d’occupation visé</span><span style="color: #1F4FFF"><span data-k="occLabel"></span></span></span>
+      <input type="range" min="40" max="95" step="5" id="f-occ" value="70" style="width: 100%; accent-color: #1F4FFF; height: 28px">
+      <span style="display: flex; justify-content: space-between; font-size: 12.5px; font-weight: 500; color: #4A5675"><span>40 %</span><span>95 %</span></span>
+     </label>
+    </div>
+   
+   <div style="background: #0B1533; color: #FFFFFF; border-radius: 20px; padding: 28px; display: flex; flex-direction: column; gap: 14px">
+    <p style="margin: 0; font-size: 14px; font-weight: 600; color: #B4BEDB; text-transform: uppercase; letter-spacing: 0.08em">Votre revenu net estimé</p>
+    <p style="margin: 0; font-family: 'Plus Jakarta Sans', sans-serif; font-size: 56px; font-weight: 700; line-height: 1; letter-spacing: -0.03em"><span data-k="net"></span><span style="font-size: 18px; font-weight: 500; letter-spacing: 0"> / mois</span></p>
+    <p style="margin: 0; font-size: 15px; color: #B4BEDB">soit <span data-k="year"></span> par an · <span data-k="typeLabel"></span>, <span data-k="zoneLabel"></span></p>
+    <dl style="margin: 6px 0 0; font-size: 15px">
+     <div style="display: flex; justify-content: space-between; gap: 12px; padding: 10px 0; border-top: 1px solid rgba(255,255,255,0.12)"><dt style="color: #B4BEDB">Prix moyen par nuit</dt><dd style="margin: 0; font-weight: 600"><span data-k="price"></span></dd></div>
+     <div style="display: flex; justify-content: space-between; gap: 12px; padding: 10px 0; border-top: 1px solid rgba(255,255,255,0.12)"><dt style="color: #B4BEDB">Nuits réservées par mois</dt><dd style="margin: 0; font-weight: 600"><span data-k="nights"></span></dd></div>
+     <div style="display: flex; justify-content: space-between; gap: 12px; padding: 10px 0; border-top: 1px solid rgba(255,255,255,0.12)"><dt style="color: #B4BEDB">Revenu brut</dt><dd style="margin: 0; font-weight: 600"><span data-k="gross"></span></dd></div>
+     <div style="display: flex; justify-content: space-between; gap: 12px; padding: 10px 0; border-top: 1px solid rgba(255,255,255,0.12)"><dt style="color: #B4BEDB">Accompagnement les Gônes (20 %)</dt><dd style="margin: 0; font-weight: 600"><span data-k="fee"></span></dd></div>
+    </dl>
+    <div style="display: flex; flex-direction: column; gap: 10px; margin-top: 6px">
+     <a href="#" data-href="calHref" data-track="Clic Calendly" target="_blank" rel="noopener" style="display: flex; align-items: center; justify-content: center; gap: 10px; min-height: 52px; border-radius: 12px; background: #FFB547; color: #0B1533; font-weight: 700; font-size: 16px; text-decoration: none"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg> Réserver un appel de 15 min</a>
+     <a href="#" data-href="waHref" data-track="Clic WhatsApp" target="_blank" rel="noopener" style="display: flex; align-items: center; justify-content: center; gap: 10px; min-height: 48px; border-radius: 12px; border: 1.5px solid rgba(255,255,255,0.35); color: #FFFFFF; font-weight: 600; font-size: 15px; text-decoration: none"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.3 7.5L3 21l2-5.6A8.4 8.4 0 1 1 21 11.5z"/></svg> Envoyer ma simulation sur WhatsApp</a>
+    </div>
+    <p style="margin: 0; font-size: 12.5px; line-height: 1.5; color: #B4BEDB">Estimation indicative, hors frais de ménage, à affiner ensemble lors de l’appel.</p>
+   </div>
+  </div>
+ </div>
+</section>
+<section id="services" style="padding: 112px 24px; background: #FFFFFF">
+ <div style="max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; gap: 48px">
+  <div style="display: flex; flex-direction: column; gap: 14px; text-align: center">
+   <p style="margin: 0; font-size: 14px; font-weight: 700; color: #1F4FFF; text-transform: uppercase; letter-spacing: 0.1em">Notre accompagnement</p>
+   <h2 style="margin: 0; font-family: 'Plus Jakarta Sans', sans-serif; font-size: clamp(32px, 3.6vw, 48px); line-height: 1.1; letter-spacing: -0.03em; margin: 0 auto; max-width: 780px">Votre appartement en ligne, rentable, sans la charge mentale</h2>
+   <p style="margin: 0; font-size: 18px; line-height: 1.55; color: #4A5675; max-width: 640px; margin: 0 auto;">On vous accompagne de la mise en place jusqu’à la dernière réservation. Vous gardez la main, on fait le terrain.</p>
+  </div>
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap: 20px">
+   <article style="background: #F5F7FF; border: 1px solid #E2E7F5; border-radius: 20px; padding: 28px; display: flex; flex-direction: column; gap: 14px">
+    <span style="width: 48px; height: 48px; border-radius: 14px; background: #E3E9FF; color: #1F4FFF; display: inline-flex; align-items: center; justify-content: center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.6 13.4 13.4 20.6a2 2 0 0 1-2.8 0L3 13V3h10l7.6 7.6a2 2 0 0 1 0 2.8z"/><circle cx="7.5" cy="7.5" r="1.5"/></svg></span>
+    <h3 style="margin: 0; font-family: 'Plus Jakarta Sans', sans-serif; font-size: 21px; letter-spacing: -0.01em">Des prix ajustés ensemble</h3>
+    <p style="margin: 0; font-size: 16px; line-height: 1.55; color: #4A5675">On vous propose des prix ajustés ensemble pour maximiser vos revenus : saisons, week-ends, Fête des Lumières, salons et concerts. Vous validez, vos revenus suivent.</p>
+   </article>
+   <article style="background: #F5F7FF; border: 1px solid #E2E7F5; border-radius: 20px; padding: 28px; display: flex; flex-direction: column; gap: 14px">
+    <span style="width: 48px; height: 48px; border-radius: 14px; background: #E3E9FF; color: #1F4FFF; display: inline-flex; align-items: center; justify-content: center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="7.5" cy="15.5" r="4.5"/><path d="M10.7 12.3 21 2M17 6l3 3M14 9l2 2"/></svg></span>
+    <h3 style="margin: 0; font-family: 'Plus Jakarta Sans', sans-serif; font-size: 21px; letter-spacing: -0.01em">Remise des clés</h3>
+    <p style="margin: 0; font-size: 16px; line-height: 1.55; color: #4A5675">Accueil des voyageurs, boîte à clés ou check-in en personne, contrôle du logement à chaque départ. Vous n’avez plus à vous déplacer.</p>
+   </article>
+   <article style="background: #F5F7FF; border: 1px solid #E2E7F5; border-radius: 20px; padding: 28px; display: flex; flex-direction: column; gap: 14px">
+    <span style="width: 48px; height: 48px; border-radius: 14px; background: #E3E9FF; color: #1F4FFF; display: inline-flex; align-items: center; justify-content: center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></span>
+    <h3 style="margin: 0; font-family: 'Plus Jakarta Sans', sans-serif; font-size: 21px; letter-spacing: -0.01em">Urgences & petits travaux</h3>
+    <p style="margin: 0; font-size: 16px; line-height: 1.55; color: #4A5675">Fuite, chauffe-eau, disjoncteur, serrure : on vous accompagne avec notre réseau de plombiers et d’électriciens, à moins de 10 km.</p>
+   </article>
+   <article style="background: #F5F7FF; border: 1px solid #E2E7F5; border-radius: 20px; padding: 28px; display: flex; flex-direction: column; gap: 14px">
+    <span style="width: 48px; height: 48px; border-radius: 14px; background: #E3E9FF; color: #1F4FFF; display: inline-flex; align-items: center; justify-content: center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"/></svg></span>
+    <h3 style="margin: 0; font-family: 'Plus Jakarta Sans', sans-serif; font-size: 21px; letter-spacing: -0.01em">Ménage & linge</h3>
+    <p style="margin: 0; font-size: 16px; line-height: 1.55; color: #4A5675">Ménage soigné entre chaque séjour, linge et consommables. Un logement impeccable, c’est la base d’un avis 5★.</p>
+   </article>
+   <article style="background: #F5F7FF; border: 1px solid #E2E7F5; border-radius: 20px; padding: 28px; display: flex; flex-direction: column; gap: 14px">
+    <span style="width: 48px; height: 48px; border-radius: 14px; background: #E3E9FF; color: #1F4FFF; display: inline-flex; align-items: center; justify-content: center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg></span>
+    <h3 style="margin: 0; font-family: 'Plus Jakarta Sans', sans-serif; font-size: 21px; letter-spacing: -0.01em">Une annonce qui convertit</h3>
+    <p style="margin: 0; font-size: 16px; line-height: 1.55; color: #4A5675">Photos, titre, description, livret d’accueil : on met votre appartement en ligne pour qu’il se démarque dès la première semaine.</p>
+   </article>
+   <article style="background: #F5F7FF; border: 1px solid #E2E7F5; border-radius: 20px; padding: 28px; display: flex; flex-direction: column; gap: 14px">
+    <span style="width: 48px; height: 48px; border-radius: 14px; background: #E3E9FF; color: #1F4FFF; display: inline-flex; align-items: center; justify-content: center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg></span>
+    <h3 style="margin: 0; font-family: 'Plus Jakarta Sans', sans-serif; font-size: 21px; letter-spacing: -0.01em">Voyageurs & avis</h3>
+    <p style="margin: 0; font-size: 16px; line-height: 1.55; color: #4A5675">Réponses rapides, communication fluide, petites attentions : la recette pour passer d’hôte à Superhôte.</p>
+   </article>
+  </div>
+ </div>
+</section>
+<section style="padding: 112px 24px; background: #0B1533; color: #FFFFFF">
+ <div style="max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; gap: 48px">
+  <div style="display: flex; flex-direction: column; gap: 14px; text-align: center">
+   <p style="margin: 0; font-size: 14px; font-weight: 700; color: #FFB547; text-transform: uppercase; letter-spacing: 0.1em">Comment ça marche</p>
+   <h2 style="margin: 0 auto; font-family: 'Plus Jakarta Sans', sans-serif; font-size: clamp(32px, 3.6vw, 48px); line-height: 1.1; letter-spacing: -0.03em; max-width: 760px">De l’appartement vide aux premières réservations</h2>
+  </div>
+  <ol style="list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr)); gap: 16px">
+   <li style="display: flex; flex-direction: column; gap: 12px; padding: 24px; border-radius: 20px; background: rgba(255,255,255,0.06)">
+    <span style="font-family: 'Plus Jakarta Sans', sans-serif; font-size: 40px; font-weight: 700; color: #FFB547; line-height: 1">01</span>
+    <h3 style="margin: 0; font-family: 'Plus Jakarta Sans', sans-serif; font-size: 20px; color: #FFFFFF">Simulez</h3>
+    <p style="margin: 0; font-size: 15.5px; line-height: 1.5; color: #B4BEDB">Estimez en 30 secondes ce que votre appartement peut rapporter.</p>
+   </li>
+   <li style="display: flex; flex-direction: column; gap: 12px; padding: 24px; border-radius: 20px; background: rgba(255,255,255,0.06)">
+    <span style="font-family: 'Plus Jakarta Sans', sans-serif; font-size: 40px; font-weight: 700; color: #FFB547; line-height: 1">02</span>
+    <h3 style="margin: 0; font-family: 'Plus Jakarta Sans', sans-serif; font-size: 20px; color: #FFFFFF">Échangez 15 min</h3>
+    <p style="margin: 0; font-size: 15.5px; line-height: 1.5; color: #B4BEDB">Un appel pour comprendre votre logement et vos objectifs.</p>
+   </li>
+   <li style="display: flex; flex-direction: column; gap: 12px; padding: 24px; border-radius: 20px; background: rgba(255,255,255,0.06)">
+    <span style="font-family: 'Plus Jakarta Sans', sans-serif; font-size: 40px; font-weight: 700; color: #FFB547; line-height: 1">03</span>
+    <h3 style="margin: 0; font-family: 'Plus Jakarta Sans', sans-serif; font-size: 20px; color: #FFFFFF">On met en place</h3>
+    <p style="margin: 0; font-size: 15.5px; line-height: 1.5; color: #B4BEDB">Annonce, photos, prix, clés, ménage : tout est prêt.</p>
+   </li>
+   <li style="display: flex; flex-direction: column; gap: 12px; padding: 24px; border-radius: 20px; background: rgba(255,255,255,0.06)">
+    <span style="font-family: 'Plus Jakarta Sans', sans-serif; font-size: 40px; font-weight: 700; color: #FFB547; line-height: 1">04</span>
+    <h3 style="margin: 0; font-family: 'Plus Jakarta Sans', sans-serif; font-size: 20px; color: #FFFFFF">Vous encaissez</h3>
+    <p style="margin: 0; font-size: 15.5px; line-height: 1.5; color: #B4BEDB">Les réservations arrivent, on reste à vos côtés au quotidien et pour les imprévus.</p>
+   </li>
+  </ol>
+ </div>
+</section>
+<section id="avis" style="padding: 112px 24px; background: #FFFFFF">
+ <div style="max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; gap: 48px">
+  <div style="display: flex; flex-direction: column; gap: 14px; text-align: center">
+   <p style="margin: 0; font-size: 14px; font-weight: 700; color: #1F4FFF; text-transform: uppercase; letter-spacing: 0.1em">Avis voyageurs</p>
+   <h2 style="margin: 0; font-family: 'Plus Jakarta Sans', sans-serif; font-size: clamp(32px, 3.6vw, 48px); line-height: 1.1; letter-spacing: -0.03em; margin: 0 auto; max-width: 780px">Ce que les voyageurs disent de nos logements</h2>
+   <p style="margin: 0; font-size: 18px; line-height: 1.55; color: #4A5675; max-width: 640px; margin: 0 auto;">Des avis 5★ sur Airbnb, à Villeurbanne. C’est ce niveau qu’on vise pour votre appartement.</p>
+  </div>
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 440px), 1fr)); gap: 20px">
+   <figure style="margin: 0; background: #F5F7FF; border: 1px solid #E2E7F5; border-radius: 20px; padding: 32px; display: flex; flex-direction: column; gap: 18px">
+    <p role="img" aria-label="5 étoiles sur 5" style="margin: 0; font-size: 20px; letter-spacing: 3px; color: #E8A100">★★★★★</p>
+    <blockquote style="margin: 0; font-size: 18px; line-height: 1.6">« Nous avons adoré l’appartement ! Il est immense et baigne dans la lumière. Les hôtes ont été flexibles sur notre heure d’arrivée, car nous avions notre fille avec nous pendant la canicule. Ils ont fait plus que ce qu’on pouvait attendre d’eux. »</blockquote>
+    <figcaption style="display: flex; align-items: center; gap: 12px">
+     <span aria-hidden="true" style="width: 44px; height: 44px; border-radius: 999px; background: #E3E9FF; color: #1F4FFF; display: inline-flex; align-items: center; justify-content: center; font-weight: 700">C</span>
+     <span style="display: flex; flex-direction: column"><strong style="font-size: 16px">Cara</strong><span style="font-size: 14px; color: #4A5675">Morgantown, Virginie-Occidentale · séjour de plus d’une semaine</span></span>
+    </figcaption>
+   </figure>
+   <figure style="margin: 0; background: #F5F7FF; border: 1px solid #E2E7F5; border-radius: 20px; padding: 32px; display: flex; flex-direction: column; gap: 18px">
+    <p role="img" aria-label="5 étoiles sur 5" style="margin: 0; font-size: 20px; letter-spacing: 3px; color: #E8A100">★★★★★</p>
+    <blockquote style="margin: 0; font-size: 18px; line-height: 1.6">« L’appartement est grand, avec un balcon et une belle vue, propre, cosy. Le livret d’accueil propose plein de visites dans Villeurbanne ou Lyon. La communication a été fluide et réactive. Si on revient à Lyon, nous saurons où poser nos valises. »</blockquote>
+    <figcaption style="display: flex; align-items: center; gap: 12px">
+     <span aria-hidden="true" style="width: 44px; height: 44px; border-radius: 999px; background: #E3E9FF; color: #1F4FFF; display: inline-flex; align-items: center; justify-content: center; font-weight: 700">P</span>
+     <span style="display: flex; flex-direction: column"><strong style="font-size: 16px">Philippe</strong><span style="font-size: 14px; color: #4A5675">11 ans sur Airbnb · séjour en famille à Villeurbanne</span></span>
+    </figcaption>
+   </figure>
+  </div>
+ </div>
+</section>
+<section id="articles" style="padding: 0 24px 112px; background: #FFFFFF">
+ <div style="max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; gap: 40px">
+  <div style="display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 20px">
+   <div style="display: flex; flex-direction: column; gap: 14px; text-align: left">
+   <p style="margin: 0; font-size: 14px; font-weight: 700; color: #1F4FFF; text-transform: uppercase; letter-spacing: 0.1em">Articles</p>
+   <h2 style="margin: 0; font-family: 'Plus Jakarta Sans', sans-serif; font-size: clamp(32px, 3.6vw, 48px); line-height: 1.1; letter-spacing: -0.03em;  max-width: 780px">Nos conseils pour les hôtes à Lyon et Villeurbanne</h2>
+   
+  </div>
+   <a href="/articles/" style="display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 44px; padding: 12px 20px; border-radius: 12px; background: transparent; color: #0B1533; font-weight: 600; font-size: 16px; text-decoration: none; border: 1.5px solid #C9D2EE; cursor: pointer; font-family: inherit">Voir tous les articles</a>
+  </div>
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap: 20px">
+   <article style="display: flex; flex-direction: column; gap: 14px; background: #F5F7FF; border: 1px solid #E2E7F5; border-radius: 20px; padding: 20px">
+    <div aria-hidden="true" style="height: 160px; border-radius: 14px; background: #E3E9FF; color: #1F4FFF; display: flex; align-items: center; justify-content: center"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"/></svg></div>
+    <p style="margin: 0; font-size: 13px; font-weight: 700; color: #1F4FFF; text-transform: uppercase; letter-spacing: 0.08em">Revenus · 6 min</p>
+    <h3 style="margin: 0; font-family: 'Plus Jakarta Sans', sans-serif; font-size: 20px; line-height: 1.3"><a href="/articles/combien-rapporte-un-t2-airbnb-villeurbanne/" style="color: #0B1533; text-decoration: none">Combien rapporte un T2 sur Airbnb à Villeurbanne ?</a></h3>
+    <p style="margin: 0; font-size: 15.5px; line-height: 1.55; color: #4A5675">Prix par nuit, taux d’occupation, saisons : la méthode pour estimer vos revenus.</p>
+   </article>
+   <article style="display: flex; flex-direction: column; gap: 14px; background: #F5F7FF; border: 1px solid #E2E7F5; border-radius: 20px; padding: 20px">
+    <div aria-hidden="true" style="height: 160px; border-radius: 14px; background: #E3E9FF; color: #1F4FFF; display: flex; align-items: center; justify-content: center"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.6 13.4 13.4 20.6a2 2 0 0 1-2.8 0L3 13V3h10l7.6 7.6a2 2 0 0 1 0 2.8z"/><circle cx="7.5" cy="7.5" r="1.5"/></svg></div>
+    <p style="margin: 0; font-size: 13px; font-weight: 700; color: #1F4FFF; text-transform: uppercase; letter-spacing: 0.08em">Prix · 5 min</p>
+    <h3 style="margin: 0; font-family: 'Plus Jakarta Sans', sans-serif; font-size: 20px; line-height: 1.3"><a href="/articles/fete-des-lumieres-2026-prix-airbnb/" style="color: #0B1533; text-decoration: none">Fête des Lumières : comment ajuster vos prix Airbnb</a></h3>
+    <p style="margin: 0; font-size: 15.5px; line-height: 1.55; color: #4A5675">Quatre nuits où la demande explose à Lyon. Comment en profiter.</p>
+   </article>
+   <article style="display: flex; flex-direction: column; gap: 14px; background: #F5F7FF; border: 1px solid #E2E7F5; border-radius: 20px; padding: 20px">
+    <div aria-hidden="true" style="height: 160px; border-radius: 14px; background: #E3E9FF; color: #1F4FFF; display: flex; align-items: center; justify-content: center"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg></div>
+    <p style="margin: 0; font-size: 13px; font-weight: 700; color: #1F4FFF; text-transform: uppercase; letter-spacing: 0.08em">Superhôte · 5 min</p>
+    <h3 style="margin: 0; font-family: 'Plus Jakarta Sans', sans-serif; font-size: 20px; line-height: 1.3"><a href="/articles/" style="color: #0B1533; text-decoration: none">Devenir Superhôte en quelques réservations</a></h3>
+    <p style="margin: 0; font-size: 15.5px; line-height: 1.55; color: #4A5675">Les critères d’Airbnb et les attentions qui font les avis 5★.</p>
+   </article>
+  </div>
+ </div>
+</section>
+<section style="padding: 0 24px 112px; background: #FFFFFF">
+ <div style="max-width: 1200px; margin: 0 auto; border-radius: 20px; background: #1F4FFF; color: #FFFFFF; padding: 48px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 24px">
+  <div style="display: flex; flex-direction: column; gap: 10px; max-width: 680px">
+   <h2 style="margin: 0; font-family: 'Plus Jakarta Sans', sans-serif; font-size: 32px; letter-spacing: -0.02em">Proches de votre appartement, vraiment.</h2>
+   <p style="margin: 0; font-size: 17px; line-height: 1.55; color: #DCE3FF">On accompagne uniquement des logements à moins de 10 km de Villeurbanne et Lyon. C’est ce qui nous permet d’intervenir vite quand un voyageur a besoin de nous.</p>
+  </div>
+  <a href="#contact" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 26px; border-radius: 12px; background: #FFFFFF; color: #1F4FFF; font-weight: 700; text-decoration: none">Vérifier mon adresse</a>
+ </div>
+</section>
+<section id="contact" style="padding: 112px 24px; background: #F5F7FF">
+ <div style="max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 440px), 1fr)); gap: 48px; align-items: start">
+  <div style="display: flex; flex-direction: column; gap: 24px">
+   <div style="display: flex; flex-direction: column; gap: 14px; text-align: left">
+   <p style="margin: 0; font-size: 14px; font-weight: 700; color: #1F4FFF; text-transform: uppercase; letter-spacing: 0.1em">Je suis intéressé·e</p>
+   <h2 style="margin: 0; font-family: 'Plus Jakarta Sans', sans-serif; font-size: clamp(32px, 3.6vw, 48px); line-height: 1.1; letter-spacing: -0.03em;  max-width: 780px">Parlons de votre appartement</h2>
+   <p style="margin: 0; font-size: 18px; line-height: 1.55; color: #4A5675; max-width: 640px; ">Laissez-nous vos coordonnées : on vous rappelle sous 24 h avec une estimation personnalisée. Pressé·e ? Écrivez-nous directement.</p>
+  </div>
+   <div style="display: flex; flex-wrap: wrap; gap: 12px">
+    <a href="#" data-href="waHello" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 44px; padding: 12px 20px; border-radius: 12px; background: #1F4FFF; color: #FFFFFF; font-weight: 600; font-size: 16px; text-decoration: none; border: 0; cursor: pointer; font-family: inherit"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.3 7.5L3 21l2-5.6A8.4 8.4 0 1 1 21 11.5z"/></svg> WhatsApp</a>
+    <a href="#" data-href="calHref" data-track="Clic Calendly" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 44px; padding: 12px 20px; border-radius: 12px; background: transparent; color: #0B1533; font-weight: 600; font-size: 16px; text-decoration: none; border: 1.5px solid #C9D2EE; cursor: pointer; font-family: inherit"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg> Prendre rendez-vous</a>
+   </div>
+  </div>
+  <div style="background: #FFFFFF; border: 1px solid #E2E7F5; border-radius: 20px; padding: 32px; box-shadow: 0 20px 50px rgba(15, 23, 60, 0.08)">
+   <div id="form-wrap">
+    <form id="lead-form" style="display: flex; flex-direction: column; gap: 18px">
+     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr)); gap: 16px">
+      <label style="display: flex; flex-direction: column; gap: 8px; font-size: 14px; font-weight: 600; color: #0B1533">Prénom et nom<input type="text" placeholder="Camille Martin" autocomplete="name" name="nom" required style="min-height: 48px; padding: 0 14px; border-radius: 12px; border: 1.5px solid #CBD3EA; background: #FFFFFF; color: #0B1533; font-size: 16px; font-family: inherit"></label>
+      <label style="display: flex; flex-direction: column; gap: 8px; font-size: 14px; font-weight: 600; color: #0B1533">Téléphone<input type="tel" placeholder="06 12 34 56 78" autocomplete="tel" name="telephone" required style="min-height: 48px; padding: 0 14px; border-radius: 12px; border: 1.5px solid #CBD3EA; background: #FFFFFF; color: #0B1533; font-size: 16px; font-family: inherit"></label>
+     </div>
+     <label style="display: flex; flex-direction: column; gap: 8px; font-size: 14px; font-weight: 600; color: #0B1533">E-mail<input type="email" placeholder="camille@exemple.fr" autocomplete="email" name="email" style="min-height: 48px; padding: 0 14px; border-radius: 12px; border: 1.5px solid #CBD3EA; background: #FFFFFF; color: #0B1533; font-size: 16px; font-family: inherit"></label>
+     <label style="display: flex; flex-direction: column; gap: 8px; font-size: 14px; font-weight: 600; color: #0B1533">Adresse ou quartier du logement<input type="text" placeholder="Rue, quartier, ville" autocomplete="street-address" name="adresse" style="min-height: 48px; padding: 0 14px; border-radius: 12px; border: 1.5px solid #CBD3EA; background: #FFFFFF; color: #0B1533; font-size: 16px; font-family: inherit"></label>
+     <fieldset style="border: 0; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px">
+      <legend style="font-size: 14px; font-weight: 600; margin-bottom: 10px">Votre logement est-il déjà sur Airbnb ?</legend>
+      <div style="display: flex; flex-wrap: wrap; gap: 10px"><label style="display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 16px; border-radius: 999px; border: 1.5px solid #CBD3EA; background: #FFFFFF; font-size: 15px; cursor: pointer"><input type="radio" name="airbnb" value="Oui" style="accent-color: #1F4FFF"> Oui</label><label style="display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 16px; border-radius: 999px; border: 1.5px solid #CBD3EA; background: #FFFFFF; font-size: 15px; cursor: pointer"><input type="radio" name="airbnb" value="Pas encore" style="accent-color: #1F4FFF"> Pas encore</label><label style="display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 16px; border-radius: 999px; border: 1.5px solid #CBD3EA; background: #FFFFFF; font-size: 15px; cursor: pointer"><input type="radio" name="airbnb" value="Je réfléchis" style="accent-color: #1F4FFF"> Je réfléchis</label></div>
+     </fieldset>
+     <label style="display: flex; flex-direction: column; gap: 8px; font-size: 14px; font-weight: 600; color: #0B1533">Un message ? (facultatif)<textarea name="message" rows="3" placeholder="Surface, disponibilités, questions…" style="min-height: 48px; padding: 0 14px; border-radius: 12px; border: 1.5px solid #CBD3EA; background: #FFFFFF; color: #0B1533; font-size: 16px; font-family: inherit; padding: 12px 14px; resize: vertical"></textarea></label>
+     <label style="display: flex; gap: 10px; align-items: flex-start; font-size: 13.5px; line-height: 1.5; color: #4A5675"><input type="checkbox" name="consentement" required style="accent-color: #1F4FFF; width: 18px; height: 18px; margin-top: 2px"> J’accepte d’être recontacté·e par la conciergerie les Gônes au sujet de mon logement.</label>
+     <button type="submit" style="display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 44px; padding: 16px 26px; border-radius: 12px; background: #1F4FFF; color: #FFFFFF; font-weight: 600; font-size: 16px; text-decoration: none; border: 0; cursor: pointer; font-family: inherit">Je suis intéressé·e</button>
+    </form>
+   </div>
+   <div id="form-thanks" hidden>
+    <div style="display: flex; flex-direction: column; gap: 14px; align-items: flex-start; padding: 24px 0">
+     <span style="width: 56px; height: 56px; border-radius: 999px; background: #E3E9FF; color: #1F4FFF; display: inline-flex; align-items: center; justify-content: center"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span>
+     <h3 style="margin: 0; font-family: 'Plus Jakarta Sans', sans-serif; font-size: 28px">Merci, c’est noté !</h3>
+     <p style="margin: 0; font-size: 17px; line-height: 1.55; color: #4A5675">On revient vers vous sous 24 h. En attendant, vous pouvez réserver un créneau directement.</p>
+     <a href="#" data-href="calHref" data-track="Clic Calendly" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 44px; padding: 12px 20px; border-radius: 12px; background: #1F4FFF; color: #FFFFFF; font-weight: 600; font-size: 16px; text-decoration: none; border: 0; cursor: pointer; font-family: inherit"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg> Choisir un créneau</a>
+    </div>
+   </div>
+  </div>
+ </div>
+</section>
+
+</Base>
