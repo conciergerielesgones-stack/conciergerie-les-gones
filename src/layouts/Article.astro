@@ -5,10 +5,10 @@ const { frontmatter, headings = [] } = Astro.props;
 const fm = frontmatter;
 const toc = headings.filter(h => h.depth === 2);
 const faqSchema = fm.faq?.length ? [{ "@context": "https://schema.org", "@type": "FAQPage", "mainEntity": fm.faq.map(f => ({ "@type": "Question", "name": f.q, "acceptedAnswer": { "@type": "Answer", "text": f.a } })) }] : [];
-const articleSchema = { "@context": "https://schema.org", "@type": "Article", "headline": fm.title, "description": fm.description, "datePublished": fm.date, "dateModified": fm.updated ?? fm.date, "author": { "@type": "Organization", "name": "Conciergerie les Gônes" } };
+const articleSchema = { "@context": "https://schema.org", "@type": "Article", "headline": fm.title, ...(fm.image ? { "image": new URL(fm.image, Astro.site).toString() } : {}), "description": fm.description, "datePublished": fm.date, "dateModified": fm.updated ?? fm.date, "author": { "@type": "Organization", "name": "Conciergerie les Gônes" } };
 const dateFr = new Date(fm.updated ?? fm.date).toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' });
 ---
-<Base title={`${fm.title} · les Gônes`} description={fm.description} schema={[articleSchema, ...faqSchema]}>
+<Base title={`${fm.title} · les Gônes`} description={fm.description} schema={[articleSchema, ...faqSchema]} image={fm.image}>
 <section style="padding: 56px 24px 0">
  <div style="max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; gap: 22px">
   <nav aria-label="Fil d’Ariane" style="font-size: 14px; color: #4A5675"><a href="/" style="color: #4A5675">Accueil</a> › <a href="/articles/" style="color: #4A5675">Articles</a> › {fm.category}</nav>
