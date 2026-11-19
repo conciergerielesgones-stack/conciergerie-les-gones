@@ -1,6 +1,6 @@
 // Réglages du site : modifiez ici, tout le site suit.
 
-export const WA = "33600000000";                                  // votre numéro WhatsApp, format international sans +
+export const WA = "33638881074";                                  // votre numéro WhatsApp, format international sans +
 export const CAL = "https://calendly.com/VOTRE-LIEN/15min";       // votre lien Calendly
 export const WEBHOOK = "https://hook.eu2.make.com/VOTRE-WEBHOOK"; // URL du webhook Make (scénario → Notion)
 export const COMM = 20;                                           // commission en %
