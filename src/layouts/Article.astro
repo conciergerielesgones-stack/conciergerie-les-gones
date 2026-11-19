@@ -1,0 +1,52 @@
+---
+import Base from './Base.astro';
+import '../styles/article.css';
+const { frontmatter, headings = [] } = Astro.props;
+const fm = frontmatter;
+const toc = headings.filter(h => h.depth === 2);
+const faqSchema = fm.faq?.length ? [{ "@context": "https://schema.org", "@type": "FAQPage", "mainEntity": fm.faq.map(f => ({ "@type": "Question", "name": f.q, "acceptedAnswer": { "@type": "Answer", "text": f.a } })) }] : [];
+const articleSchema = { "@context": "https://schema.org", "@type": "Article", "headline": fm.title, "description": fm.description, "datePublished": fm.date, "dateModified": fm.updated ?? fm.date, "author": { "@type": "Organization", "name": "Conciergerie les Gônes" } };
+const dateFr = new Date(fm.updated ?? fm.date).toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' });
+---
+<Base title={`${fm.title} · les Gônes`} description={fm.description} schema={[articleSchema, ...faqSchema]}>
+<section style="padding: 56px 24px 0">
+ <div style="max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; gap: 22px">
+  <nav aria-label="Fil d’Ariane" style="font-size: 14px; color: #4A5675"><a href="/" style="color: #4A5675">Accueil</a> › <a href="/articles/" style="color: #4A5675">Articles</a> › {fm.category}</nav>
+  <p style="margin: 0; font-size: 13px; font-weight: 700; color: #1F4FFF; text-transform: uppercase; letter-spacing: 0.08em">{fm.category} · {fm.readingTime} de lecture</p>
+  <h1 style="margin: 0; font-family: 'Plus Jakarta Sans', sans-serif; font-size: clamp(36px, 4.6vw, 60px); line-height: 1.06; letter-spacing: -0.035em; max-width: 920px">{fm.title}</h1>
+  <p style="margin: 0; font-size: 20px; line-height: 1.55; color: #4A5675; max-width: 780px">{fm.description}</p>
+  <p style="margin: 0; font-size: 15px; color: #4A5675"><strong style="color: #0B1533">L’équipe les Gônes</strong> · {fm.updated ? 'Mis à jour' : 'Publié'} le {dateFr}</p>
+  {fm.image ? <img src={fm.image} alt={fm.imageAlt ?? ''} style="width: 100%; height: 360px; object-fit: cover; border-radius: 14px"> : <div aria-hidden="true" style="height: 280px; border-radius: 14px; background: #1F4FFF"></div>}
+ </div>
+</section>
+<section style="padding: 56px 24px 96px">
+ <div style="max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 64px; align-items: flex-start">
+  <aside style="flex: 1 1 240px; max-width: 300px; display: flex; flex-direction: column; gap: 24px">
+   <nav aria-label="Sommaire" style="display: flex; flex-direction: column; gap: 12px; padding: 24px; border-radius: 16px; background: #F5F7FF">
+    <p style="margin: 0; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em">Sommaire</p>
+    <ol style="margin: 0; padding-left: 18px; display: flex; flex-direction: column; gap: 10px">
+     {toc.map(h => <li><a href={`#${h.slug}`} style="color: #4A5675; text-decoration: none; font-size: 15px; line-height: 1.5">{h.text}</a></li>)}
+     {fm.faq?.length && <li><a href="#faq" style="color: #4A5675; text-decoration: none; font-size: 15px">Questions fréquentes</a></li>}
+    </ol>
+   </nav>
+   <div style="display: flex; flex-direction: column; gap: 12px; padding: 24px; border-radius: 16px; background: #0B1533; color: #FFFFFF">
+    <p style="margin: 0; font-family: 'Plus Jakarta Sans', sans-serif; font-size: 20px; font-weight: 700; line-height: 1.25">Estimez votre appartement en 30 secondes</p>
+    <a href="/#simulateur" style="display: flex; align-items: center; justify-content: center; min-height: 48px; border-radius: 12px; background: #FFB547; color: #0B1533; font-weight: 700; text-decoration: none">Simuler mes revenus</a>
+   </div>
+  </aside>
+  <article style="flex: 999 1 560px; min-width: 0; max-width: 760px; display: flex; flex-direction: column; gap: 22px">
+   {fm.summary?.length && (
+    <div style="border-radius: 16px; background: #F5F7FF; border: 1px solid #E2E7F5; padding: 24px 28px; display: flex; flex-direction: column; gap: 12px">
+     <p style="margin: 0; font-weight: 700; font-size: 15px; text-transform: uppercase; letter-spacing: 0.08em; color: #1F4FFF">En bref</p>
+     <ul style="margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 8px; font-size: 17px; line-height: 1.6">{fm.summary.map(s => <li>{s}</li>)}</ul>
+    </div>)}
+   <div class="prose"><slot /></div>
+   {fm.faq?.length && (<>
+    <h2 id="faq" style="margin: 16px 0 0; font-family: 'Plus Jakarta Sans', sans-serif; font-size: 30px; letter-spacing: -0.02em">Questions fréquentes</h2>
+    <div style="display: flex; flex-direction: column; gap: 12px">
+     {fm.faq.map(f => <details style="border: 1px solid #E2E7F5; border-radius: 14px; padding: 18px 20px"><summary style="cursor: pointer; font-weight: 600; font-size: 17px">{f.q}</summary><p style="margin: 12px 0 0; font-size: 16.5px; line-height: 1.65; color: #4A5675">{f.a}</p></details>)}
+    </div></>)}
+  </article>
+ </div>
+</section>
+</Base>
