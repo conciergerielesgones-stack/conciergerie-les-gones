@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.VOTRE-DOMAINE.fr/sitemap-index.xml
+Sitemap: https://conciergerielesgones.fr/sitemap-index.xml
