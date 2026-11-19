@@ -6,7 +6,7 @@ category: Prix
 readingTime: 5 min
 date: 2026-11-19
 image: /images/fete-des-lumieres-lyon-2026.jpg
-imageAlt: "Installations lumineuses et foule pendant la Fête des Lumières à Lyon"
+imageAlt: "Fête des Lumières 2026 à Lyon : foule et installations lumineuses, période de forte demande pour les locations Airbnb"
 summary:
   - "La Fête des Lumières 2026 a lieu du samedi 5 au mardi 8 décembre."
   - "Ouvrez vos dates tôt et partez des prix des annonces comparables autour de chez vous."
