@@ -5,6 +5,8 @@ description: "Quatre soirées où Lyon fait le plein de visiteurs. Voici comment
 category: Prix
 readingTime: 5 min
 date: 2026-11-19
+image: /images/fete-des-lumieres-lyon-2026.jpg
+imageAlt: "Installations lumineuses et foule pendant la Fête des Lumières à Lyon"
 summary:
   - "La Fête des Lumières 2026 a lieu du samedi 5 au mardi 8 décembre."
   - "Ouvrez vos dates tôt et partez des prix des annonces comparables autour de chez vous."
