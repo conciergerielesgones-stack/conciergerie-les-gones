@@ -1,5 +1,9 @@
 ---
 import Base from '../layouts/Base.astro';
+const latest = Object.values(import.meta.glob('./articles/*.md', { eager: true }))
+  .filter(p => !p.frontmatter.draft)
+  .sort((a, b) => new Date(b.frontmatter.date) - new Date(a.frontmatter.date))
+  .slice(0, 3);
 ---
 <Base title="Conciergerie les Gônes · Boostez vos revenus Airbnb et Booking à Lyon et Villeurbanne"
       description="Conciergerie Airbnb et Booking à Lyon et Villeurbanne : prix ajustés ensemble, remise des clés, ménage, urgences. Simulez vos revenus en 30 secondes.">
@@ -165,24 +169,13 @@ import Base from '../layouts/Base.astro';
    <a href="/articles/" style="display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 44px; padding: 12px 20px; border-radius: 12px; background: transparent; color: #0B1533; font-weight: 600; font-size: 16px; text-decoration: none; border: 1.5px solid #C9D2EE; cursor: pointer; font-family: inherit">Voir tous les articles</a>
   </div>
   <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap: 20px">
+  {latest.map(p => (
    <article style="display: flex; flex-direction: column; gap: 14px; background: #F5F7FF; border: 1px solid #E2E7F5; border-radius: 20px; padding: 20px">
-    <div aria-hidden="true" style="height: 160px; border-radius: 14px; background: #E3E9FF; color: #1F4FFF; display: flex; align-items: center; justify-content: center"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"/></svg></div>
-    <p style="margin: 0; font-size: 13px; font-weight: 700; color: #1F4FFF; text-transform: uppercase; letter-spacing: 0.08em">Revenus · 6 min</p>
-    <h3 style="margin: 0; font-family: 'Plus Jakarta Sans', sans-serif; font-size: 20px; line-height: 1.3"><a href="/articles/combien-rapporte-un-t2-airbnb-villeurbanne/" style="color: #0B1533; text-decoration: none">Combien rapporte un T2 sur Airbnb à Villeurbanne ?</a></h3>
-    <p style="margin: 0; font-size: 15.5px; line-height: 1.55; color: #4A5675">Prix par nuit, taux d’occupation, saisons : la méthode pour estimer vos revenus.</p>
-   </article>
-   <article style="display: flex; flex-direction: column; gap: 14px; background: #F5F7FF; border: 1px solid #E2E7F5; border-radius: 20px; padding: 20px">
-    <div aria-hidden="true" style="height: 160px; border-radius: 14px; background: #E3E9FF; color: #1F4FFF; display: flex; align-items: center; justify-content: center"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.6 13.4 13.4 20.6a2 2 0 0 1-2.8 0L3 13V3h10l7.6 7.6a2 2 0 0 1 0 2.8z"/><circle cx="7.5" cy="7.5" r="1.5"/></svg></div>
-    <p style="margin: 0; font-size: 13px; font-weight: 700; color: #1F4FFF; text-transform: uppercase; letter-spacing: 0.08em">Prix · 5 min</p>
-    <h3 style="margin: 0; font-family: 'Plus Jakarta Sans', sans-serif; font-size: 20px; line-height: 1.3"><a href="/articles/fete-des-lumieres-2026-prix-airbnb/" style="color: #0B1533; text-decoration: none">Fête des Lumières : comment ajuster vos prix Airbnb</a></h3>
-    <p style="margin: 0; font-size: 15.5px; line-height: 1.55; color: #4A5675">Quatre nuits où la demande explose à Lyon. Comment en profiter.</p>
-   </article>
-   <article style="display: flex; flex-direction: column; gap: 14px; background: #F5F7FF; border: 1px solid #E2E7F5; border-radius: 20px; padding: 20px">
-    <div aria-hidden="true" style="height: 160px; border-radius: 14px; background: #E3E9FF; color: #1F4FFF; display: flex; align-items: center; justify-content: center"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg></div>
-    <p style="margin: 0; font-size: 13px; font-weight: 700; color: #1F4FFF; text-transform: uppercase; letter-spacing: 0.08em">Superhôte · 5 min</p>
-    <h3 style="margin: 0; font-family: 'Plus Jakarta Sans', sans-serif; font-size: 20px; line-height: 1.3"><a href="/articles/" style="color: #0B1533; text-decoration: none">Devenir Superhôte en quelques réservations</a></h3>
-    <p style="margin: 0; font-size: 15.5px; line-height: 1.55; color: #4A5675">Les critères d’Airbnb et les attentions qui font les avis 5★.</p>
-   </article>
+    <a href={p.url} tabindex="-1" aria-hidden="true" style="display: block">{p.frontmatter.image ? <img src={p.frontmatter.image} alt="" style="display: block; width: 100%; height: 160px; object-fit: cover; border-radius: 14px"> : <div style="height: 160px; border-radius: 14px; background: #E3E9FF"></div>}</a>
+    <p style="margin: 0; font-size: 13px; font-weight: 700; color: #1F4FFF; text-transform: uppercase; letter-spacing: 0.08em">{p.frontmatter.category} · {p.frontmatter.readingTime}</p>
+    <h3 style="margin: 0; font-family: 'Plus Jakarta Sans', sans-serif; font-size: 20px; line-height: 1.3"><a href={p.url} style="color: #0B1533; text-decoration: none">{p.frontmatter.title}</a></h3>
+    <p style="margin: 0; font-size: 15.5px; line-height: 1.55; color: #4A5675">{p.frontmatter.description}</p>
+   </article>))}
   </div>
  </div>
 </section>
