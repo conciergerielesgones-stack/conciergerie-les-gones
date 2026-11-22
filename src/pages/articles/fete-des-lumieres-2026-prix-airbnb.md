@@ -26,6 +26,8 @@ Chaque année, la Fête des Lumières transforme Lyon en musée à ciel ouvert, 
 
 L’édition 2026 se tient **du samedi 5 au mardi 8 décembre**, avec des installations lumineuses chaque soir dans toute la ville. Le 8 décembre, date historique de la fête, clôture l’événement.
 
+<div class="rdv"><div class="rdv-text"><p class="rdv-title">On prépare votre appartement pour la Fête des Lumières ?</p><p class="rdv-sub">Échangeons 15 minutes sur votre logement et vos objectifs : on vous propose un accompagnement adapté à votre appartement.</p></div><a href="#" data-href="calHref" data-track="Clic Calendly" target="_blank" rel="noopener">Prendre RDV sur Calendly</a></div>
+
 ## Pourquoi ces 4 nuits comptent autant
 
 Les visiteurs viennent de toute la France et de l’étranger, souvent en famille ou entre amis, pour un week-end prolongé. Les hôtels du centre affichent complet tôt, et beaucoup de voyageurs se tournent vers Airbnb, y compris à Villeurbanne et dans les quartiers bien reliés par le métro et le tram.

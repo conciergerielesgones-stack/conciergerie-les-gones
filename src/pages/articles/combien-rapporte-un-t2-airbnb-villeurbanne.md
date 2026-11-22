@@ -24,6 +24,8 @@ C’est la première question que se posent les propriétaires : « Est-ce que �
 
 Le calcul tient en une ligne : **prix moyen par nuit × nuits louées dans le mois**. On obtient le revenu brut, dont on retire ensuite les frais d’accompagnement et les éventuelles charges.
 
+<div class="rdv"><div class="rdv-text"><p class="rdv-title">Vous voulez louer votre appartement sur Airbnb ou Booking ?</p><p class="rdv-sub">Échangeons 15 minutes sur votre logement et vos objectifs : on vous propose un accompagnement adapté à votre appartement.</p></div><a href="#" data-href="calHref" data-track="Clic Calendly" target="_blank" rel="noopener">Prendre RDV sur Calendly</a></div>
+
 ## Les 3 leviers qui font varier le revenu
 
 **1. L’emplacement.** Proche du métro, du Gratte-Ciel ou de la Part-Dieu, un logement se loue plus facilement et plus cher.
