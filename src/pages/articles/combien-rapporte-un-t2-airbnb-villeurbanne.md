@@ -6,6 +6,7 @@ category: Revenus
 readingTime: 6 min
 date: 2026-11-19
 image: /images/hotel-de-ville-villeurbanne-airbnb-t2.jpg
+imageSmall: true
 imageAlt: "Hôtel de ville de Villeurbanne au coucher du soleil : combien rapporte un T2 sur Airbnb à Villeurbanne"
 summary:
   - "Le revenu dépend de trois chiffres : le prix par nuit, le nombre de nuits louées et ce que vous reversez en frais."
