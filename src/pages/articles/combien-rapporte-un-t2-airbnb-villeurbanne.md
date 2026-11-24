@@ -55,6 +55,12 @@ Avec les hypothèses de notre simulateur pour un T2 dans le quartier Gratte-Ciel
 
 ## Les règles à vérifier avant de louer
 
-Louer en courte durée est encadré : déclaration auprès de la mairie, règles différentes pour une résidence principale ou secondaire, règlement de copropriété.
+Louer en courte durée est encadré. Voici les points essentiels à connaître :
 
-<p class="todo"><strong>[À compléter avant publication]</strong> Détail des règles en vigueur à Lyon et Villeurbanne, vérifiées sur les sites officiels à la date de mise en ligne.</p>
+- **Une location courte, par définition.** Un meublé de tourisme est loué à la journée, à la semaine ou au mois, et un même voyageur ne peut pas y rester plus de 90 jours consécutifs sur une année civile.
+- **Résidence principale : un plafond de nuits.** Votre résidence principale est le logement que vous occupez au moins 8 mois par an. Vous pouvez la louer jusqu’à 120 jours par an, ou moins si votre commune a abaissé ce plafond (jusqu’à 90 jours minimum).
+- **Résidence secondaire : des démarches supplémentaires.** Une déclaration en mairie est obligatoire, et certaines grandes villes exigent en plus une autorisation de changement d’usage.
+- **Le numéro d’enregistrement.** Dans les communes qui l’ont mis en place, chaque annonce doit afficher un numéro d’enregistrement, et les plateformes retirent les annonces qui n’en ont pas.
+- **La copropriété.** Vérifiez que votre règlement de copropriété autorise la location courte durée.
+
+<p class="note">Les règles évoluent régulièrement et varient d’une commune à l’autre : avant de publier votre annonce, renseignez-vous auprès de la mairie de Villeurbanne ou de Lyon. Nous faisons le point ensemble lors de notre premier échange.</p>

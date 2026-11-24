@@ -127,7 +127,7 @@ Avant de publier votre annonce, quelques vérifications s’imposent :
 - **Le règlement de copropriété** : certains règlements encadrent ou limitent la location courte durée.
 - **La taxe de séjour** : elle est en général collectée par les plateformes, mais vérifiez-le pour chacune.
 
-<p class="todo"><strong>À vérifier :</strong> les règles évoluent régulièrement et peuvent différer entre Villeurbanne et Lyon. Renseignez-vous auprès de la mairie de Villeurbanne avant de vous lancer ; nous faisons le point ensemble lors de notre premier échange.</p>
+<p class="note"><strong>Bon à savoir :</strong> les règles évoluent régulièrement et peuvent différer entre Villeurbanne et Lyon. Renseignez-vous auprès de la mairie de Villeurbanne avant de vous lancer ; nous faisons le point ensemble lors de notre premier échange.</p>
 
 ## 10. Mesurer et ajuster
 
