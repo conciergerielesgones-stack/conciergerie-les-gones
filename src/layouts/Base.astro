@@ -48,11 +48,11 @@ a{color:#1F4FFF}a:hover{color:#0B1533}
 <Footer />
 </div>
 <script is:inline set:html={cfg}></script>
-<div id="cookie-banner" hidden role="dialog" aria-label="Cookies" style="position: fixed; left: 16px; right: 16px; bottom: 16px; z-index: 50; max-width: 560px; margin: 0 auto; background: #FFFFFF; color: #0B1533; border: 1px solid #E2E7F5; border-radius: 16px; box-shadow: 0 20px 50px rgba(15, 23, 60, 0.18); padding: 20px 22px; display: flex; flex-direction: column; gap: 14px; font-family: 'Inter', sans-serif">
- <p style="margin: 0; font-size: 15px; line-height: 1.55"><strong>Un petit clic pour un site encore meilleur ?</strong> Zéro pub, zéro revente de données : juste des statistiques de visite pour améliorer le site. On peut compter sur vous ? <a href="/confidentialite/" style="color: #1F4FFF">En savoir plus</a></p>
- <div style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: flex-end">
-  <button type="button" id="cookie-refuse" style="min-height: 44px; padding: 0 18px; border-radius: 12px; border: 1.5px solid #C9D2EE; background: #FFFFFF; color: #0B1533; font-weight: 600; font-size: 15px; cursor: pointer; font-family: inherit">Refuser</button>
-  <button type="button" id="cookie-accept" style="min-height: 44px; padding: 0 18px; border-radius: 12px; border: 0; background: #1F4FFF; color: #FFFFFF; font-weight: 600; font-size: 15px; cursor: pointer; font-family: inherit">Accepter</button>
+<div id="cookie-banner" hidden role="dialog" aria-label="Cookies" style="position: fixed; left: 16px; right: 16px; bottom: 16px; z-index: 50; max-width: 760px; margin: 0 auto; background: #FFFFFF; color: #0B1533; border: 1px solid #E2E7F5; border-radius: 14px; box-shadow: 0 12px 32px rgba(15, 23, 60, 0.16); padding: 12px 16px; display: flex; flex-wrap: wrap; align-items: center; gap: 10px 16px; font-family: 'Inter', sans-serif">
+ <p style="margin: 0; flex: 1 1 380px; font-size: 14px; line-height: 1.5"><strong>Un petit clic pour un site encore meilleur ?</strong> Zéro pub, zéro revente de données : juste des statistiques de visite pour améliorer le site. On peut compter sur vous ? <a href="/confidentialite/" style="color: #1F4FFF">En savoir plus</a></p>
+ <div style="display: flex; gap: 8px; margin-left: auto">
+  <button type="button" id="cookie-refuse" style="min-height: 40px; padding: 0 16px; border-radius: 10px; border: 1.5px solid #C9D2EE; background: #FFFFFF; color: #0B1533; font-weight: 600; font-size: 15px; cursor: pointer; font-family: inherit">Refuser</button>
+  <button type="button" id="cookie-accept" style="min-height: 40px; padding: 0 16px; border-radius: 10px; border: 0; background: #1F4FFF; color: #FFFFFF; font-weight: 600; font-size: 15px; cursor: pointer; font-family: inherit">Accepter</button>
  </div>
 </div>
 <script is:inline>
@@ -79,7 +79,8 @@ function gtag(){dataLayer.push(arguments);}
   document.getElementById('cookie-refuse').addEventListener('click', function(){ save('denied'); hide(); });
   document.querySelectorAll('[data-cookies]').forEach(function(a){ a.addEventListener('click', function(e){ e.preventDefault(); show(); }); });
   var c = read();
-  if (c === 'granted') loadTag(); else if (c !== 'denied') show(); else hide();
+  var seen = false; try { seen = sessionStorage.getItem('gones-cookies-seen') === '1'; sessionStorage.setItem('gones-cookies-seen', '1'); } catch(e) {}
+  if (c === 'granted') loadTag(); else if (c !== 'denied' && !seen) show(); else hide();
 })();
 </script>
 <script is:inline>
