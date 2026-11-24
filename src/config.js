@@ -12,4 +12,4 @@ export const ZONES = {presquile:["Lyon 1-2 · Presqu’île",1.2], lyon6:["Lyon 
 export const SITE_NAME = "Conciergerie les Gônes";
 
 // Google tag (Google Analytics) — chargé uniquement après acceptation des cookies
-export const GTAG_ID = "GTM-NBZVZPXC";
+export const GTAG_ID = "G-DY5BG44HRJ";

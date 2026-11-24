@@ -65,10 +65,11 @@ function gtag(){dataLayer.push(arguments);}
   var loaded = false;
   function loadTag(){
     if (loaded || !GTAG_ID) return; loaded = true;
-    gtag('js', new Date());
     var s = document.createElement('script'); s.async = true;
-    s.src = 'https://www.googletagmanager.com/gtm.js?id=' + GTAG_ID;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GTAG_ID;
     document.head.appendChild(s);
+    gtag('js', new Date());
+    gtag('config', GTAG_ID);
   }
   window.trackEvent = function(name, params){ if (loaded) gtag('event', name, params || {}); };
   var banner = document.getElementById('cookie-banner');
