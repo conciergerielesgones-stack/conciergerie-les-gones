@@ -5,6 +5,8 @@ description: "Prix par nuit, taux d’occupation, saisons : la méthode simple p
 category: Revenus
 readingTime: 6 min
 date: 2026-11-19
+image: /images/hotel-de-ville-villeurbanne-airbnb-t2.jpg
+imageAlt: "Hôtel de ville de Villeurbanne au coucher du soleil : combien rapporte un T2 sur Airbnb à Villeurbanne"
 summary:
   - "Le revenu dépend de trois chiffres : le prix par nuit, le nombre de nuits louées et ce que vous reversez en frais."
   - "Le quartier, la saison et la note de l’annonce font bouger le prix par nuit."
