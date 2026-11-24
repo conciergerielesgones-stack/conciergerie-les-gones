@@ -1,6 +1,6 @@
 ---
 layout: ../../layouts/Article.astro
-title: "Comment maximiser les revenus de son appartement à Villeurbanne avec Airbnb et Booking"
+title: "Comment maximiser les revenus de son appartement à Villeurbanne avec Airbnb et Booking en 2026"
 description: "Prix, calendrier, annonce, avis, choix entre Airbnb et Booking, règles à respecter : le guide complet pour louer votre appartement de Villeurbanne en courte durée et en tirer le meilleur revenu."
 category: Revenus
 readingTime: 10 min
