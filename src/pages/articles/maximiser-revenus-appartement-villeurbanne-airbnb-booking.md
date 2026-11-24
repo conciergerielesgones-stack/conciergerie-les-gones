@@ -5,6 +5,8 @@ description: "Prix, calendrier, annonce, avis, choix entre Airbnb et Booking, r�
 category: Revenus
 readingTime: 10 min
 date: 2026-11-24
+image: /images/villeurbanne-gratte-ciel-conciergerie-airbnb.jpg
+imageAlt: "Conciergerie pour louer et maximiser ses revenus à Villeurbanne, quartier des Gratte-Ciel"
 summary:
   - "Le revenu d’un appartement en courte durée tient à trois leviers : le prix par nuit, le nombre de nuits louées et la note des voyageurs."
   - "Publier sur Airbnb et Booking en même temps touche deux publics différents, à condition de synchroniser les calendriers."
