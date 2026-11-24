@@ -10,3 +10,6 @@ export const ZONES = {presquile:["Lyon 1-2 · Presqu’île",1.2], lyon6:["Lyon 
   gratteciel:["Villeurbanne · Gratte-Ciel",0.95], villeurbanne:["Villeurbanne · autres quartiers",0.9], lyon89:["Lyon 8 / 9",0.88]};
 
 export const SITE_NAME = "Conciergerie les Gônes";
+
+// Google tag (Google Analytics) — chargé uniquement après acceptation des cookies
+export const GTAG_ID = "GTM-NBZVZPXC";
